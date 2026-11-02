@@ -1,0 +1,22 @@
+flowchart TB
+    C[Client / AI-enabled application] --> G[API Gateway]
+    G --> R[Request Service]
+    R --> O[Inference Orchestrator]
+    O --> M[Model Server]
+    R -. inference request .-> B[Event Broker]
+    B --> W[Inference Worker]
+    W --> M
+    W -. inference result .-> B
+    B --> S[Result Service]
+    S --> D[(Data Services)]
+    O --> D
+    R -. telemetry .-> T[OpenTelemetry Collector]
+    O -. telemetry .-> T
+    M -. telemetry .-> T
+    B -. telemetry .-> T
+    T --> P[Prometheus / Loki / Tempo]
+    P --> GF[Grafana]
+    K[Kubernetes + HPA / KEDA] -. orchestrates .-> R
+    K -. orchestrates .-> O
+    K -. orchestrates .-> M
+    CI[GitHub Actions + Helm] -. deploys .-> K
