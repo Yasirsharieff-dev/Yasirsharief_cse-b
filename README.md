@@ -1,4 +1,12 @@
-![Uploading 5a0afc27-a5ba-4f7d-a3d9-e1846d50f51b.png…]()
+<p align="center">
+  <img src="assets/project-banner.png" width="100%" alt="AI-Ready Cloud Application Platform Architecture">
+</p>
+
+<h1 align="center">AI-Ready Cloud Application Platform</h1>
+
+<p align="center">
+  A Cloud-Native Foundation for Intelligent Distributed Services
+</p>
 # AI-Ready Cloud Application Platform for Intelligent Distributed Services
 
 A reusable, cloud-native foundation for building, deploying, scaling and observing AI-enabled distributed applications.
